@@ -17,18 +17,21 @@ class Hero extends Component {
 		this.setSaberPower = this.setSaberPower.bind(this);
 	}
 	componentDidMount() {
-		axios.get(apiURL)
-			.then(res => {
-				this.setState({
-					falconPower: res.data.charging_status.falcon,
-					saberPower: res.data.charging_status.lightsaber,
-					totalPower: this.state.falconPower + this.state.saberPower
-				});
-				console.log(res.data.charging_status.falcon);
-				console.log(res.data.charging_status.lightsaber);
-				console.log(this.state.totalPower);
-			})
-	} 
+		
+			axios.get(apiURL)
+				.then(res => {
+					this.setState({
+						falconPower: res.data.charging_status.falcon,
+						saberPower: res.data.charging_status.lightsaber,
+						//totalPower: this.state.falconPower + this.state.saberPower
+					});
+					console.log(res.data.charging_status.falcon);
+					console.log(res.data.charging_status.lightsaber);
+					console.log(this.state.totalPower);
+				})
+		}
+	
+
 	setFalconPower() {
 		this.setState({
 			falconPower: Math.floor(Math.random() * 8),
@@ -45,7 +48,7 @@ class Hero extends Component {
 		return (
 			<section className="total-power">
 				<div className="container">
-					<TotalPower totalPower={this.state.totalPower}/>
+					<TotalPower totalPower={this.state.falconPower + this.state.saberPower}/>
 					<div className="power-consumption">
 					<figure className="millennium-falcon">
 						<img

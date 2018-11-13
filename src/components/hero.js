@@ -16,22 +16,19 @@ class Hero extends Component {
 		this.setFalconPower = this.setFalconPower.bind(this);
 		this.setSaberPower = this.setSaberPower.bind(this);
 	}
-	componentDidMount() {
-		
+	componentDidMount() {		
 			axios.get(apiURL)
 				.then(res => {
 					this.setState({
 						falconPower: res.data.charging_status.falcon,
 						saberPower: res.data.charging_status.lightsaber,
-						//totalPower: this.state.falconPower + this.state.saberPower
+						totalPower: this.state.falconPower + this.state.saberPower
 					});
 					console.log(res.data.charging_status.falcon);
 					console.log(res.data.charging_status.lightsaber);
 					console.log(this.state.totalPower);
 				})
 		}
-	
-
 	setFalconPower() {
 		this.setState({
 			falconPower: Math.floor(Math.random() * 8),

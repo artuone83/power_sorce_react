@@ -12,7 +12,9 @@ class Hero extends Component {
 			falconPower: 0,
 			saberPower: 0,
 			addClassFalcon: false,
-			addClassSaber: false
+			addClassSaber: false,
+			yellowFalcon: false,
+			yellowSaber: false
 		}
 		this.setFalconPower = this.setFalconPower.bind(this);
 		this.setSaberPower = this.setSaberPower.bind(this);
@@ -38,7 +40,8 @@ class Hero extends Component {
 		this.setState({
 			falconPower: Math.floor(Math.random() * 8),
 			apiURL: falconURL,
-			addClassFalcon: !this.state.addClassFalcon				
+			addClassFalcon: !this.state.addClassFalcon,
+			yellowFalcon: !this.state.yellowFalcon				
 		});
 					
 	}
@@ -46,7 +49,8 @@ class Hero extends Component {
 		this.setState({
 			saberPower: Math.floor(Math.random() * 8),
 			apiURL: saberURL,
-			addClassSaber: !this.state.addClassSaber					
+			addClassSaber: !this.state.addClassSaber,
+			yellowSaber: !this.state.yellowSaber					
 		});
 		
 	}
@@ -60,7 +64,8 @@ class Hero extends Component {
 						<img
 							src="./img/m_falcon.png"
 							alt="Millennium Falcon"
-							className= {this.state.addClassFalcon ? 'green-border' : 'gray-border'}
+							className= {this.state.addClassFalcon ? "green-border" : "gray-border"}
+							id={this.state.yellowFalcon ? "yellow-falcon-bg" : " "}
 							onClick={this.setFalconPower} />
 						<figcaption className="falcon-power">{this.state.falconPower} kW</figcaption>
 					</figure>
@@ -68,7 +73,8 @@ class Hero extends Component {
 						<img 
 							src="./img/lightsaber.png"
 							alt="Lightsaber"
-							className= {this.state.addClassSaber ? 'green-border' : 'gray-border'}
+							className= {this.state.addClassSaber ? "green-border" : "gray-border"}
+							id={this.state.yellowSaber ? "yellow-saber-bg" : ''} 
 							onClick={this.setSaberPower} />
 						<figcaption className="lightsaber-power">{this.state.saberPower} kW</figcaption>
 					</figure>

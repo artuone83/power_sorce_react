@@ -72,8 +72,11 @@
 		.gray-border {
 			border: 5px solid rgba(155,155,155,.5);
 		}
-		.yellow-bg {
+		#yellow-falcon-bg {
 			background: rgba(225,177,1,1);
+		}
+		#yellow-saber-bg {
+			@extend #yellow-falcon-bg;
 		}
 		.falcon-power {
 			color: #e1b101;

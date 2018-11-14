@@ -68,7 +68,7 @@ class Hero extends Component {
 					<div className="power-consumption">
 					<figure className="millennium-falcon">
 						<img
-							src="./img/m_falcon.png"
+							src={require("../img/m_falcon.png")}
 							alt="Millennium Falcon"
 							className= {this.state.addClassFalcon ? "green-border" : "gray-border"}
 							id={this.state.yellowFalcon ? "yellow-falcon-bg" : " "}
@@ -77,7 +77,7 @@ class Hero extends Component {
 					</figure>
 					<figure className="lightsaber">
 						<img 
-							src="./img/lightsaber.png"
+							src={require("../img/lightsaber.png")}
 							alt="Lightsaber"
 							className= {this.state.addClassSaber ? "green-border" : "gray-border"}
 							id={this.state.yellowSaber ? "yellow-saber-bg" : ''} 

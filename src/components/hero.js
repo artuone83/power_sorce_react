@@ -43,6 +43,10 @@ class Hero extends Component {
 			addClassFalcon: !this.state.addClassFalcon,
 			yellowFalcon: !this.state.yellowFalcon				
 		});
+		if(this.state.yellowFalcon === true){
+			console.log(this.state.yellowFalcon);
+			this.setState({yellowSaber: false});
+		}
 					
 	}
 	setSaberPower() {
@@ -52,7 +56,9 @@ class Hero extends Component {
 			addClassSaber: !this.state.addClassSaber,
 			yellowSaber: !this.state.yellowSaber					
 		});
-		
+		if(this.state.yellowSaber === "yellow-falcon-bg"){
+			this.setState({yellowFalcon: false});
+		}
 	}
 	render() {
 		return (

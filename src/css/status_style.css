@@ -80,6 +80,10 @@ a {
 
 .nav li {
   display: inline-block;
+<<<<<<< HEAD
+=======
+  margin-right: 10px;
+>>>>>>> css
 }
 
 .nav li:last-of-type {

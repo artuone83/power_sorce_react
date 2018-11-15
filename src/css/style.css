@@ -181,14 +181,18 @@ a {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 25px;
   }
 }
 
 .text-section .col {
-  margin-right: 80px;
-  perspective: 100px;
-  transform: rotateX(15deg);
+  margin: 0px 25px;
+  transform: rotateX(25deg) translateZ(-60px);
+}
+
+@media all and (min-width: 320px) and (max-width: 620px) {
+  .text-section .col {
+    transform: rotateX(0) translateZ(0);
+  }
 }
 
 @media all and (max-width: 960px) {
@@ -202,12 +206,8 @@ a {
   }
 }
 
-.text-section .col:last-of-type {
-  margin-right: 0;
-}
-
 .text-section p {
   line-height: 35px;
   color: #e1b101;
-  font-size: 25px;
+  font-size: 20px;
 }

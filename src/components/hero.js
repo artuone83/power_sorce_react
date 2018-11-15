@@ -20,7 +20,6 @@ class Hero extends Component {
 		this.setSaberPower = this.setSaberPower.bind(this);
 		this.getPowerVal = this.getPowerVal.bind(this)
 	}
-
 	getPowerVal() {
 		axios.get(this.state.apiURL)
 			.then(res => {
@@ -32,7 +31,6 @@ class Hero extends Component {
 				this.state.saberPower != 0 ? this.setState({addClassSaber: true}) : this.setState({addClassSaber: false});
 			})
 	}
-
 	componentDidMount() {		
 			setInterval(this.getPowerVal, 3000);
 		}
@@ -41,24 +39,18 @@ class Hero extends Component {
 			falconPower: Math.floor(Math.random() * 8),
 			apiURL: falconURL,
 			addClassFalcon: !this.state.addClassFalcon,
-			yellowFalcon: !this.state.yellowFalcon				
-		});
-		if(this.state.yellowFalcon === true){
-			console.log(this.state.yellowFalcon);
-			this.setState({yellowSaber: false});
-		}
-					
+			yellowFalcon: !this.state.yellowFalcon,
+			yellowSaber: false				
+		});					
 	}
 	setSaberPower() {
 		this.setState({
 			saberPower: Math.floor(Math.random() * 8),
 			apiURL: saberURL,
 			addClassSaber: !this.state.addClassSaber,
-			yellowSaber: !this.state.yellowSaber					
-		});
-		if(this.state.yellowSaber === "yellow-falcon-bg"){
-			this.setState({yellowFalcon: false});
-		}
+			yellowSaber: !this.state.yellowSaber,
+			yellowFalcon: false					
+		});		
 	}
 	render() {
 		return (

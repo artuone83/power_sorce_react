@@ -109,17 +109,15 @@ a {
   background-color: #000;
 }
 
-.hero {
-  width: 100vw;
+.total-power {
+  background: url("../img/power2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
   height: 100vh;
   position: relative;
-  background: url("../img/power.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
 }
 
-.hero::before {
+.total-power::before {
   content: '';
   width: 100%;
   background-color: rgba(0, 0, 0, 0.5);
@@ -128,86 +126,88 @@ a {
   bottom: 0;
 }
 
-.hero h1 {
+.total-power > .container {
   position: absolute;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  color: #fff;
-  font-size: 50px;
-  letter-spacing: 5px;
-  background-color: rgba(255, 255, 255, 0.2);
-  padding: 20px 10px;
-  width: 60%;
-  text-align: center;
-  border-radius: 20px;
-}
-
-@media all and (min-width: 320px) and (max-width: 480px) {
-  .hero h1 {
-    width: 100%;
-    border-radius: 0;
-    font-size: 32px;
-  }
+  width: 100%;
 }
 
 @media all and (max-width: 960px) {
-  .hero h1 {
-    width: 100%;
-    border-radius: 0;
-    font-size: 32px;
+  .total-power > .container {
+    top: 60%;
   }
 }
 
-.text-section {
-  background-color: #000;
+.total-power h1 {
+  text-align: center;
+  font-size: 32px;
+  letter-spacing: 3px;
+  margin: 25px 0;
+  color: #fff;
 }
 
-.text-section > .container {
+@media all and (max-width: 960px) {
+  .total-power h1 {
+    font-size: 25px;
+  }
+}
+
+.total-power .power-consumption {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  padding: 80px 50px;
-  perspective: 600px;
+}
+
+.total-power .millennium-falcon, .total-power .lightsaber {
+  width: 50%;
+  text-align: center;
 }
 
 @media all and (max-width: 960px) {
-  .text-section > .container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    padding: 25px;
+  .total-power .millennium-falcon, .total-power .lightsaber {
+    width: 100%;
   }
 }
 
-.text-section .col {
-  margin-right: 80px;
-  perspective: 100px;
-  transform: rotateX(15deg);
+.total-power img {
+  border-radius: 50%;
+  border: 5px solid rgba(155, 155, 155, 0.5);
+  width: 200px;
+  height: 200px;
+  -o-object-fit: scale-down;
+  object-fit: scale-down;
+  max-width: 100%;
+  cursor: pointer;
 }
 
 @media all and (max-width: 960px) {
-  .text-section .col {
-    margin-right: 0;
-    margin-bottom: 80px;
-    margin-left: 0;
-  }
-  .text-section .col:last-of-type {
-    margin-bottom: 0;
+  .total-power img {
+    width: 125px;
+    height: 125px;
   }
 }
 
-.text-section .col:last-of-type {
-  margin-right: 0;
+.total-power .green-border {
+  border: 5px solid rgba(0, 128, 0, 0.5);
 }
 
-.text-section p {
-  line-height: 35px;
+.total-power .gray-border {
+  border: 5px solid rgba(155, 155, 155, 0.5);
+}
+
+.total-power #yellow-falcon-bg, .total-power #yellow-saber-bg {
+  background: #e1b101;
+}
+
+.total-power .falcon-power, .total-power .lightsaber, .total-power .total-power-value {
   color: #e1b101;
-  font-size: 25px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.total-power .total-power-value {
+  font-size: 32px;
 }

@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import ReactDOM from 'react-dom';
-import './scss/style.scss';
+import css from './css/style.css';
 import PageHeader from './components/page_header';
 import PowerSource from './components/power_source';
 import TextSection from './components/text_section';

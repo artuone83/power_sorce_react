@@ -25,7 +25,8 @@
   },
   "scripts": {
     "build": "webpack --mode=production",
-    "dev": "webpack-dev-server --mode=development"
+    "dev": "webpack-dev-server --mode=development",
+    "watch": "webpack --watch"
   },
   "keywords": [],
   "author": "",

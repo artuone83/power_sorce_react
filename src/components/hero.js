@@ -60,18 +60,18 @@ class Hero extends Component {
 				<div className="container">
 					<TotalPower totalPower={this.state.falconPower + this.state.saberPower}/>
 					<div className="power-consumption">					
-					<MillenniumFalcon
-						toggleClass={this.state.addClassFalcon ? "green-border" : "gray-border"}
-						toggleId={this.state.yellowFalcon ? "yellow-falcon-bg" : " "}
-						handleSetFalconPower={this.setFalconPower}
-						falconPower={this.state.falconPower}
-					/>					
-					<LightSaber
-						toggleClass={this.state.addClassSaber ? "green-border" : "gray-border"}
-						toggleId={this.state.yellowSaber ? "yellow-saber-bg" : ''}
-						handleSetSaberPower={this.setSaberPower}
-						saberPower={this.state.saberPower}
-					/>
+						<MillenniumFalcon
+							toggleClass={this.state.addClassFalcon ? "green-border" : "gray-border"}
+							toggleId={this.state.yellowFalcon ? "yellow-falcon-bg" : " "}
+							handleSetFalconPower={this.setFalconPower}
+							falconPower={this.state.falconPower}
+						/>					
+						<LightSaber
+							toggleClass={this.state.addClassSaber ? "green-border" : "gray-border"}
+							toggleId={this.state.yellowSaber ? "yellow-saber-bg" : ''}
+							handleSetSaberPower={this.setSaberPower}
+							saberPower={this.state.saberPower}
+						/>
 					</div>
 				</div>
 			</section>

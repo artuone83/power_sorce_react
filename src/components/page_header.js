@@ -1,12 +1,15 @@
 import React from 'react';
 import Logo from './logo';
 import Navi from './navi';
-const PageHeader = () => {
+const PageHeader = (props) => {
 	return (
 		<header className='page-header'>
 			<div className="container">
 				<Logo />
-				<Navi />
+				<Navi 
+					activeStatus={props.active}
+					activeIndex={props.activeHome}
+				/>
 			</div>
 		</header>
 	);

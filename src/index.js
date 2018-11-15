@@ -10,7 +10,7 @@ class Index_App extends Component {
 	render() {
 		return (
 			<div>
-				<PageHeader />
+				<PageHeader activeHome='active'/>
 				<PowerSource />
 				<TextSection />
 				<Footer />

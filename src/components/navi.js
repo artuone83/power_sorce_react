@@ -1,10 +1,10 @@
 import React from 'react';
-const Navi = () => {
+const Navi = (props) => {
   return (
     <nav className="nav">
 				<ul>
-					<li><a href="index.html">HOME</a></li>
-					<li><a href="status.html" className="active">STATUS</a></li>
+					<li><a href="index.html" className={props.activeIndex}>HOME</a></li>
+					<li><a href="status.html" className={props.activeStatus}>STATUS</a></li>
 				</ul>
 			</nav>  
   );

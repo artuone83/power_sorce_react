@@ -6,17 +6,17 @@ import Hero from './components/hero';
 import Footer from './components/footer';
 
 class App extends Component {
-  render() {
-    return (
-      <div>
-        <PageHeader />
-        <Hero />
-        <Footer/>
-      </div>
-    );
-  }
+	render() {
+		return (
+			<div>
+				<PageHeader />
+				<Hero />
+				<Footer/>
+			</div>
+		);
+	}
 }
 ReactDOM.render(
-  <App />,
-  document.querySelector('.app')
+	<App />,
+	document.querySelector('.app')
 );

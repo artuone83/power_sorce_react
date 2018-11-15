@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import TotalPower from './total_power';
 import axios from 'axios';
-import MillenniumFalcon from './millennium-_falcon';
+import MilleniumFalcon from './millenium-_falcon';
 import LightSaber from './light_saber';
 
 const falconURL = 'https://challenge.codetain.com/api/v1/charging_status?priority=falcon';
@@ -60,7 +60,7 @@ class Hero extends Component {
 				<div className="container">
 					<TotalPower totalPower={this.state.falconPower + this.state.saberPower}/>
 					<div className="power-consumption">					
-						<MillenniumFalcon
+						<MilleniumFalcon
 							toggleClass={this.state.addClassFalcon ? "green-border" : "gray-border"}
 							toggleId={this.state.yellowFalcon ? "yellow-falcon-bg" : " "}
 							handleSetFalconPower={this.setFalconPower}

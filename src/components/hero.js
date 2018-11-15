@@ -34,7 +34,7 @@ class Hero extends Component {
 			})
 	}
 	componentDidMount() {		
-			setInterval(this.getPowerVal, 3000);
+			setInterval(this.getPowerVal, 10000);
 		}
 	setFalconPower() {
 		this.setState({

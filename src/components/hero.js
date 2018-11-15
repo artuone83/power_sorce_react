@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import TotalPower from './total_power';
 import axios from 'axios';
+import MillenniumFalcon from './millennium-_falcon';
+import LightSaber from './light_saber';
 
 const falconURL = 'https://challenge.codetain.com/api/v1/charging_status?priority=falcon';
 const saberURL = 'https://challenge.codetain.com/api/v1/charging_status?priority=lightsaber';
@@ -57,25 +59,19 @@ class Hero extends Component {
 			<section className="total-power">
 				<div className="container">
 					<TotalPower totalPower={this.state.falconPower + this.state.saberPower}/>
-					<div className="power-consumption">
-					<figure className="millennium-falcon">
-						<img
-							src={require("../img/m_falcon.png")}
-							alt="Millennium Falcon"
-							className= {this.state.addClassFalcon ? "green-border" : "gray-border"}
-							id={this.state.yellowFalcon ? "yellow-falcon-bg" : " "}
-							onClick={this.setFalconPower} />
-						<figcaption className="falcon-power">{this.state.falconPower} kW</figcaption>
-					</figure>
-					<figure className="lightsaber">
-						<img 
-							src={require("../img/lightsaber.png")}
-							alt="Lightsaber"
-							className= {this.state.addClassSaber ? "green-border" : "gray-border"}
-							id={this.state.yellowSaber ? "yellow-saber-bg" : ''} 
-							onClick={this.setSaberPower} />
-						<figcaption className="lightsaber-power">{this.state.saberPower} kW</figcaption>
-					</figure>
+					<div className="power-consumption">					
+					<MillenniumFalcon
+						toggleClass={this.state.addClassFalcon ? "green-border" : "gray-border"}
+						toggleId={this.state.yellowFalcon ? "yellow-falcon-bg" : " "}
+						handleSetFalconPower={this.setFalconPower}
+						falconPower={this.state.falconPower}
+					/>					
+					<LightSaber
+						toggleClass={this.state.addClassSaber ? "green-border" : "gray-border"}
+						toggleId={this.state.yellowSaber ? "yellow-saber-bg" : ''}
+						handleSetSaberPower={this.setSaberPower}
+						saberPower={this.state.saberPower}
+					/>
 					</div>
 				</div>
 			</section>

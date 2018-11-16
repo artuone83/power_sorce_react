@@ -172,6 +172,7 @@ a {
   -ms-flex-pack: justify;
   justify-content: space-between;
   padding: 80px 50px;
+  -webkit-perspective: 600px;
   perspective: 600px;
 }
 
@@ -186,11 +187,13 @@ a {
 
 .text-section .col {
   margin: 0px 25px;
+  -webkit-transform: rotateX(25deg) translateZ(-60px);
   transform: rotateX(25deg) translateZ(-60px);
 }
 
 @media all and (min-width: 320px) and (max-width: 620px) {
   .text-section .col {
+    -webkit-transform: rotateX(0) translateZ(0);
     transform: rotateX(0) translateZ(0);
   }
 }

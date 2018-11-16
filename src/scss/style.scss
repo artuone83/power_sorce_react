@@ -55,7 +55,8 @@ $nav_link_bg: #1a4788;
 				-ms-flex-pack: justify;
 						justify-content: space-between;  
 		padding: 80px 50px;
-		perspective: 600px;
+		-webkit-perspective: 600px;
+		        perspective: 600px;
 		@media all and (max-width: 960px) {
 			-webkit-box-orient: vertical;
 			-webkit-box-direction: normal;
@@ -66,9 +67,11 @@ $nav_link_bg: #1a4788;
 	}
 	.col {
 		margin: 0px 25px;		
-		transform: rotateX(25deg) translateZ(-60px);
+		-webkit-transform: rotateX(25deg) translateZ(-60px);		
+		        transform: rotateX(25deg) translateZ(-60px);
 		@media all and (min-width: 320px) and (max-width:620px) {
-			transform: rotateX(0) translateZ(0);
+			-webkit-transform: rotateX(0) translateZ(0);
+			        transform: rotateX(0) translateZ(0);
 		}
 		@media all and (max-width: 960px) {
 			margin-right: 0;
